@@ -19,7 +19,8 @@ clean ()
 	exit 1
 }
 
-while true
+sig=0
+while [ "$sig" ]; do
 do
 		echo 'To infinity and beyond'
 		sleep 2
