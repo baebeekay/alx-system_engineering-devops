@@ -2,15 +2,15 @@
 # Bash (init) script 101-manage_my_process that manages manage_my_process
 # Starts manage_my_process
 #+ Creates a file containing its PID in /var/run/my_process.pid
-#+ Displays manage_my_process started
+#+ Displays manage_my_process start
 
-if [ $1="start" ]
+if [[ $1 == "start" ]]
 then
     /etc/init.d/./manage_my_process & start
     echo $$ > /var/run/my_process.pid
     echo "manage_my_process started"
 
-elif [ $1="stop" ]
+elif [[ $1 == "stop" ]]
 then
     # Stops manage_my_process
     #+ Deletes the file /var/run/my_process.pid
@@ -19,7 +19,7 @@ then
     rm /var/run/my_process.pid
     echo "manage_my_process stopped"
 
-elif [ $1="restart" ]
+elif [[ $1 == "restart" ]]
 then
     # Stops manage_my_process
     #+ Deletes the file /var/run/my_process.pid
