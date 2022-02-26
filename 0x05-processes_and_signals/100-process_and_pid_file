@@ -9,7 +9,7 @@
 echo $$ > /var/run/holbertonscript.pid
 
 trap "echo 'Y U no love me?!'" SIGINT
-trap clean SIGQUIT
+trap clean SIGQUIT 
 trap clean SIGTERM
 
 clean ()
@@ -19,9 +19,8 @@ clean ()
 	exit 1
 }
 
-sig=0
-while [ "$sig" ];
-do
+control=0
+while [ "$control" ]; do
 		echo 'To infinity and beyond'
 		sleep 2
 done
