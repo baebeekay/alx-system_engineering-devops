@@ -20,7 +20,7 @@ clean ()
 }
 
 sig=0
-while [ "$sig" ]; do
+while [ "$sig" ];
 do
 		echo 'To infinity and beyond'
 		sleep 2
